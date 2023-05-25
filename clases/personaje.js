@@ -116,20 +116,21 @@ class Personaje {
                 if (alturaIteracion >= (casillaActual.fila) * (altura_casilla_actualizada)) {
                     setTimeout(animacionSalto, 4);
                 }
-            } else if (dir == "drch") {
-                // console.log(margenIteracion, "margen Iteracionnnnnnnnnnnnnnnnnnnnnn",dir);
-                // console.log(personaje_img);
-                acumulador_lat += 0.2;
-                if (margenIteracion <= (casillaActual.columna) * 11.11) {
-                    setTimeout(animacionSalto, 4);
-                }
-            } else if (dir == "izq") {
-                acumulador_lat -= 0.2;
-                if (margenIteracion >= (casillaActual.columna) * 11.11) {
-                    setTimeout(animacionSalto, 4);
+            } 
+            // else if (dir == "drch") {
+            //     // console.log(margenIteracion, "margen Iteracionnnnnnnnnnnnnnnnnnnnnn",dir);
+            //     // console.log(personaje_img);
+            //     acumulador_lat += 0.2;
+            //     if (margenIteracion <= (casillaActual.columna) * 11.11) {
+            //         setTimeout(animacionSalto, 4);
+            //     }
+            // } else if (dir == "izq") {
+            //     acumulador_lat -= 0.2;
+            //     if (margenIteracion >= (casillaActual.columna) * 11.11) {
+            //         setTimeout(animacionSalto, 4);
 
-                }
-            }
+            //     }
+            // }
         }
 
         //personaje_img.style.top = (casillaActual.fila) * (altura_casilla_actualizada) + 'px'; //colocar altura de personaje
