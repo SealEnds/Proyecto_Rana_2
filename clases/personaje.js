@@ -78,7 +78,7 @@ class Personaje {
         /* Posición personaje */
         personaje_img = document.getElementById('personaje_img');
         personaje_img.style.top = (casillaActual.fila) * (altura_casilla_actualizada) + 'px'; //colocar altura de personaje
-        personaje_img.style.left = (casillaActual.columna) * (ancho_casilla + 0.4) + '%'; // -1 pq 0 px es la 1era col
+        personaje_img.style.left = '44.4%'; // -1 pq 0 px es la 1era col
 
     }
 
@@ -116,21 +116,20 @@ class Personaje {
                 if (alturaIteracion >= (casillaActual.fila) * (altura_casilla_actualizada)) {
                     setTimeout(animacionSalto, 4);
                 }
-            } 
-            // else if (dir == "drch") {
-            //     // console.log(margenIteracion, "margen Iteracionnnnnnnnnnnnnnnnnnnnnn",dir);
-            //     // console.log(personaje_img);
-            //     acumulador_lat += 0.2;
-            //     if (margenIteracion <= (casillaActual.columna) * 11.11) {
-            //         setTimeout(animacionSalto, 4);
-            //     }
-            // } else if (dir == "izq") {
-            //     acumulador_lat -= 0.2;
-            //     if (margenIteracion >= (casillaActual.columna) * 11.11) {
-            //         setTimeout(animacionSalto, 4);
+            } else if (dir == "drch") {
+                // console.log(margenIteracion, "margen Iteracionnnnnnnnnnnnnnnnnnnnnn",dir);
+                // console.log(personaje_img);
+                acumulador_lat += 0.2;
+                if (margenIteracion <= (casillaActual.columna) * 11.13) {
+                    setTimeout(animacionSalto, 4);
+                }
+            } else if (dir == "izq") {
+                acumulador_lat -= 0.2;
+                if (margenIteracion >= (casillaActual.columna) * 11.13) {
+                    setTimeout(animacionSalto, 4);
 
-            //     }
-            // }
+                }
+            }
         }
 
         //personaje_img.style.top = (casillaActual.fila) * (altura_casilla_actualizada) + 'px'; //colocar altura de personaje
